@@ -22,9 +22,9 @@ markdownToHTML('README.md', 'README.html') # creates html file
 
 <!-- ![](rushmore.jpg) -->
 
-This is an R color palette of one of my favorite breweries: Drygate from Glasgow, Scotland. Excellent in both taste and labels. 
+This is an R color palette of one of my favorite breweries: Drygate Brewing Co. from Glasgow, Scotland: https://www.drygate.com. Excellent in taste *and* labels.
 
-Credits go to Karthik Ram and his [Wes Anderson color palette package](https://github.com/karthik/wesanderson) for the code. 
+Credits go to Karthik Ram and his [Wes Anderson color palette package](https://github.com/karthik/wesanderson) for inspiration and code. 
 
 
 ## Installation
@@ -50,6 +50,11 @@ names(drygate_palettes)
 ## Palettes
 
 ### Basic
+
+#### Drygate Bewery
+```{r, fig_drygate}
+drygate_palette("Drygate")
+```
 
 #### Seven Peaks
 
@@ -95,31 +100,37 @@ drygate_palette("TakeMeTotheRiver")
 drygate_palette("CrossingtheRubicon")
 ```
 
+```{r, fig_cloudcity}
+drygate_palette("CloudCity")
+```
+
+```{r, fig_shred}
+drygate_palette("Shred")
+```
+
+```{r, fig_voller}
+drygate_palette("Voller")
+```
 ### Example uses
 
 ```{r, fig_ex_disco, fig.height = 3}
 library("ggplot2")
-ggplot(mtcars, aes(factor(cyl), fill=factor(vs))) +  geom_bar() +
-  scale_fill_manual(values = drygate_palette("DiscoForkliftTruck"))
+ggplot(diamonds, aes(cut, fill = cut)) +
+  geom_bar() +
+  scale_fill_manual(values = drygate_palette("CloudCity")) +
+  labs(x = "Cut", y = "Count", fill = "Cut")
 
 # pick specific colors
-pal <- drygate_palettes$DiscoForkliftTruck
-ggplot(mtcars, aes(factor(cyl), fill=factor(vs))) +  geom_bar() +
-  scale_fill_manual(values = pal[c(3,5)])
+mpg$drivetrain <- factor(mpg$drv, levels = c("f", "r", "4"),
+                          labels = c("Front-wheel", "Rear-wheel", "4-wheel"))
+pal <- drygate_palette("Drygate")[c(1, 4, 6)]
+ggplot(mpg, aes(drivetrain, fill = drivetrain)) +
+  geom_bar() +
+  scale_fill_manual(values = pal) +
+  labs(x = "Drivetrain", y = "Count", fill = "Drivetrain")
 ```
 
 ```{r, fig_ex_river, fig.height = 3}
 pal <- drygate_palette("TakeMeTotheRiver", 21, type = "continuous")
 image(volcano, col = pal)
-```
-
-```{r, zissou_heatmap, fig.height = 3, include = FALSE}
-# pal <- drygate_palette("TakeMeTotheRiver", 100, type = "continuous")
-# # heatmap is a local dataset
-# ggplot(heatmap, aes(x = X2, y = X1, fill = value)) +
-#   geom_tile() + 
-#   scale_fill_gradientn(colours = pal) + 
-#   scale_x_discrete(expand = c(0, 0)) +
-#   scale_y_discrete(expand = c(0, 0)) + 
-#   coord_equal() 
 ```

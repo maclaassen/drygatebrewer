@@ -6,3 +6,4 @@ Makefile
 .Rhistory
 .RData
 screenshots/
+.DS_Store

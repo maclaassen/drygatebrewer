@@ -1,0 +1,66 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "identifier": "drygatebrewer",
+  "description": "Palettes generated mostly from Drygate brewery.",
+  "name": "drygatebrewer: A Drygate brewery Palette Generator",
+  "codeRepository": "https://github.com/maclaassen/drygatebrewer",
+  "issueTracker": "https://github.com/maclaassen/drygatebrewer/issues",
+  "license": "https://spdx.org/licenses/MIT",
+  "version": "0.3.6.9000",
+  "programmingLanguage": {
+    "@type": "ComputerLanguage",
+    "name": "R",
+    "url": "https://r-project.org"
+  },
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Polola"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "givenName": "Karthik",
+      "familyName": "Ram",
+      "description": "Author of the original wesanderson package this code structure is derived from"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Hadley",
+      "familyName": "Wickham"
+    }
+  ],
+  "maintainer": [
+    {
+      "@type": "Person",
+      "givenName": "Polola"
+    }
+  ],
+  "softwareSuggestions": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "ggplot2",
+      "name": "ggplot2",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=ggplot2"
+    }
+  ],
+  "softwareRequirements": {
+    "1": {
+      "@type": "SoftwareApplication",
+      "identifier": "R",
+      "name": "R",
+      "version": ">= 3.0"
+    },
+    "SystemRequirements": null
+  },
+  "readme": "https://github.com/maclaassen/drygatebrewer/blob/master/README.md",
+  "keywords": ["plot", "drygate", "r", "data-visualization", "color-palette"]
+}

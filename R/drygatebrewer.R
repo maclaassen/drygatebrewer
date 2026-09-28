@@ -1,7 +1,6 @@
-#' @title drygatebrewer
-#' @name drygatebrewer
-#' @docType package
-#' @details list of palettes from Drygate brewery
-#' @description list of palettes from Drygate brewery
-NULL
-
+#' drygatebrewer: A Drygate brewery palette generator
+#'
+#' list of palettes from Drygate brewery
+#'
+#' @keywords internal
+"_PACKAGE"

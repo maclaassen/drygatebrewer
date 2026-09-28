@@ -5,7 +5,7 @@
 \alias{drygate_palettes}
 \title{Complete list of palettes}
 \format{
-An object of class \code{list} of length 3.
+An object of class \code{list} of length 11.
 }
 \usage{
 drygate_palettes

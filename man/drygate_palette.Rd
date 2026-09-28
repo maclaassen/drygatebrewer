@@ -8,11 +8,10 @@ drygate_palette(name, n, type = c("discrete", "continuous"))
 }
 \arguments{
 \item{name}{Name of desired palette. Choices are:
-\code{DiscoForkliftTruck}, \code{TakeMeTotheRiver},  \code{CrossingtheRubicon},
-\code{CrossingtheRubicon_auto}}
+\code{SevenPeaks},\code{GladEyeIPA}, \code{KelvinPilsner}, \code{BearfaceLager}, \code{DiscoForkliftTruck}, \code{TakeMeTotheRiver},  \code{CrossingtheRubicon},
+\code{CloudCity}, \code{Shred}, \code{Voller}, \code{Drygate},}
 
-\item{n}{Number of colors desired. Unfortunately most palettes now only
-have 4 or 5 colors. If omitted, uses all colours.}
+\item{n}{Number of colors desired. If omitted, uses all colours.}
 
 \item{type}{Either "continuous" or "discrete". Use continuous if you want
 to automatically interpolate between colours.
@@ -25,10 +24,18 @@ A vector of colours.
 These are a handful of color palettes from Drygate brewery.
 }
 \examples{
+drygate_palette("SevenPeaks")
+drygate_palette("GladEyeIPA")
+drygate_palette("KelvinPilsner")
+drygate_palette("BearfaceLager")
 drygate_palette("DiscoForkliftTruck")
 drygate_palette("TakeMeTotheRiver")
 drygate_palette("CrossingtheRubicon")
-drygate_palette("CrossingtheRubicon_auto")
+drygate_palette("CloudCity")
+drygate_palette("Shred")
+drygate_palette("Voller")
+drygate_palette("Drygate")
+
 
 # If you need more colours than normally found in a palette, you
 # can use a continuous palette to interpolate between existing
