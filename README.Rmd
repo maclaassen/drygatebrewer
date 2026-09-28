@@ -111,6 +111,8 @@ drygate_palette("Shred")
 ```{r, fig_voller}
 drygate_palette("Voller")
 ```
+
+
 ### Example uses
 
 ```{r, fig_ex_disco, fig.height = 3}

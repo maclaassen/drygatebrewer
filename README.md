@@ -129,7 +129,9 @@ drygate_palette("Shred")
 drygate_palette("Voller")
 ```
 
-![](figure/fig_voller-1.png)<!-- --> \### Example uses
+![](figure/fig_voller-1.png)<!-- -->
+
+### Example uses
 
 ``` r
 library("ggplot2")
